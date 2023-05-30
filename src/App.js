@@ -1,24 +1,14 @@
 import './App.css';
-
-const Person = (props) => {
-  return (
-    <>
-     <h1>Name : {props.name} </h1>
-     <h2>Occupation : {props.occupation} </h2>
-     <h2>Age : {props.age}</h2>
-    </>
-  );
-}
+import { useState } from 'react';
 
 const App = () => {
+
+  const [counter, setCounter] = useState(0);
   return (
       <div className="App">
-        <Person name = {'Yongz'} occupation = {'SDE'} age = {'20'}/>
-
-        <Person 
-          name = {'Yongs'}
-          occupation = {'Full Stack Engineer'}
-          age = {'23'}/>
+        <button onClick={() => alert('clicked')}>+</button>
+        <h1>{counter}</h1>
+        <button>-</button>
       </div>
   );
 }
