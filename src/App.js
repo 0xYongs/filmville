@@ -1,9 +1,14 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const App = () => {
 
   const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+      alert('Counter has been changed to ' + counter);
+  }, [counter]);
+  
   return (
       <div className="App">
         <button onClick={() => setCounter(prevCount => prevCount + 1)}>+</button>
