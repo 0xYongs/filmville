@@ -2,10 +2,23 @@ import './App.css';
 
 function App() {
 
-  const name = 'Yongs'
+  const name = null;
+  const myname = 'Yongs';
+  
   return (
       <div className="App">
-        <h1>Hello, {name}! (yongs) 27/5/23 4:02am</h1>
+        <h1>Hello, {myname}</h1>
+        {name ? (
+          <>
+            <h1>{myname}</h1>
+            <h2>ON true</h2>
+          </>
+        ) : (
+          <>
+            <h1> Yongs Showing on null </h1>
+            <h2> OR on false</h2>
+          </>
+        )}
       </div>
   );
 }
